@@ -22,7 +22,7 @@ test('Complete item', async ({ page }) => {
   await page.locator('.app > main > .todo-item > input').check()
   await expect(page.locator('.app > main > .todo-item > .todo-item-text')).toHaveCSS(
     'text-decoration',
-    'line-through'
+    /line-through.*/
   )
 })
 
